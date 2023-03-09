@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Home Automation http://PaulwareSensorGroup.ddns.net/Paulware</title>
+<title>Home Automation http://www.github.com/Paulware/piHomeAutomation/wiki</title>
 <Script>
   <?php
   $user = '';

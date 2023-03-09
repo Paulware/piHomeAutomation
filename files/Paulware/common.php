@@ -21,8 +21,8 @@
          }
      //}
    }   
-   function query ( $sql ) {
-     $q = mysql_query ($sql) or die ("Could not execute: $sql");
+   function query ( $conn, $sql ) {
+     $q = mysqli_query ($conn,$sql) or die ("Could not execute: $sql");
      return $q;  
    }  
    
