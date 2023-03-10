@@ -1,0 +1,921 @@
+
+
+				<h2>US & Canadian Carriers</h2>
+
+                <h3>Bell Canada</h3>
+				<ul>
+                <li>10digitphonenumber@bellmobility.ca</li>
+
+                <h3>Bell Mobility</h3>
+				<ul>
+                <li>10digitphonenumber@txt.bellmobility.ca</li>
+                
+
+                <h3>Bluegrass Cellular</h3>
+				<ul>
+                <li>10digitphonenumber@sms.bluecell.com</li>
+                </ul>
+                <h3>Boost Mobile</h3>
+			  	<ul>
+                <li>10digitphonenumber@myboostmobile.com</li>
+              	</ul>
+                <h3>BPL Mobile</h3>
+				<ul>
+                <li>10digitphonenumber@bplmobile.com</li>
+                </ul>
+                <h3>Carolina West Wireless</h3>
+				<ul>
+                <li>10digit10digitnumber@cwwsms.com</li>
+                </ul>
+                <h3>Cellular One</h3>
+				<ul>
+                <li>10digitphonenumber@mobile.celloneusa.com</li>
+                </ul>
+                <h3>Cellular South</h3>
+				<ul>
+                <li>10digitphonenumber@csouth1.com</li>
+                </ul>
+                <h3>Centennial Wireless</h3>
+				<ul>
+                <li>10digitphonenumber@cwemail.com</li>
+                </ul>
+                <h3>CenturyTel</h3>
+				<ul>
+                <li>10digitphonenumber@messaging.centurytel.net</li>
+                </ul>
+                <h3>Cingular (Now AT&amp;T)</h3>
+			  	<ul>
+                <li>10digitphonenumber@txt.att.net </li>
+              	</ul>
+                <h3>Clearnet</h3>
+				<ul>
+                <li>10digitphonenumber@msg.clearnet.com</li>
+                </ul>
+                <h3>Comcast</h3>
+			  	<ul>
+                <li>10digitphonenumber@comcastpcs.textmsg.com</li>
+              	</ul>
+                <h3>Corr Wireless Communications</h3>
+				<ul>
+                <li>10digitphonenumber@corrwireless.net</li>
+                </ul>
+                <h3>Dobson</h3>
+				<ul>
+                <li>10digitphonenumber@mobile.dobson.net</li>
+                </ul>
+                <h3>Edge Wireless</h3>
+				<ul>
+                <li>10digitphonenumber@sms.edgewireless.com</li>
+                </ul>
+                <h3>Fido</h3>
+			  	<ul>
+                <li>10digitphonenumber@fido.ca</li>
+              	</ul>
+                <h3>Golden Telecom</h3>
+				<ul>
+                <li>10digitphonenumber@sms.goldentele.com</li>
+                </ul>
+                <h3>Helio</h3>
+			  	<ul>
+                <li>10digitphonenumber@messaging.sprintpcs.com</li>
+              	</ul>
+                <h3>Houston Cellular</h3>
+			  	<ul>
+                <li>10digitphonenumber@text.houstoncellular.net</li>
+              	</ul>
+                <h3>Idea Cellular</h3>
+				<ul>
+                <li>10digitphonenumber@ideacellular.net</li>
+                </ul>
+                <h3>Illinois Valley Cellular</h3>
+                <ul>
+                <li>10digitphonenumber@ivctext.com</li>
+                </ul>
+                <h3>Inland Cellular Telephone</h3>
+				<ul>
+                <li>10digitphonenumber@inlandlink.com</li>
+                </ul>
+                <h3>MCI</h3>
+				<ul>
+                <li>10digitphonenumber@pagemci.com</li>
+                </ul>
+                <h3>Metrocall</h3>
+			  	<ul>
+                <li>10digitpagernumber@page.metrocall.com</li>
+              	</ul>
+                <h3>Metrocall 2-way</h3>
+				<ul>
+                <li>10digitpagernumber@my2way.com</li>
+                </ul>
+                <h3>Metro PCS</h3>
+			  	<ul>
+                <li>10digitphonenumber@mymetropcs.com</li>
+              	</ul>
+                <h3>Microcell</h3>
+				<ul>
+                <li>10digitphonenumber@fido.ca</li>
+                </ul>
+                <h3>Midwest Wireless</h3>
+				<ul>
+                <li>10digitphonenumber@clearlydigital.com</li>
+                </ul>
+                <h3>Mobilcomm</h3>
+				<ul>
+                <li>10digitphonenumber@mobilecomm.net</li>
+                </ul>
+                <h3>MTS</h3>
+				<ul>
+                <li>10digitphonenumber@text.mtsmobility.com</li>
+                </ul>
+                <h3>Nextel</h3>
+			  	<ul>
+                <li>10digitphonenumber@messaging.nextel.com</li>
+              	</ul>
+                <h3>OnlineBeep</h3>
+				<ul>
+                <li>10digitphonenumber@onlinebeep.net</li>
+                </ul>
+                <h3>PCS One</h3>
+			  	<ul>
+                <li>10digitphonenumber@pcsone.net</li>
+              	</ul>
+                <h3>President's Choice</h3>
+				<ul>
+                <li>10digitphonenumber@txt.bell.ca</li>
+                </ul>
+                <h3>Public Service Cellular</h3>
+				<ul>
+                <li>10digitphonenumber@sms.pscel.com</li>
+                </ul>
+                <h3>Qwest</h3>
+			  	<ul>
+                <li>10digitphonenumber@qwestmp.com</li>
+              	</ul>
+                <h3>Rogers AT&amp;T Wireless</h3>
+				<ul>
+                <li>10digitphonenumber@pcs.rogers.com</li>
+                </ul>
+                <h3>Rogers Canada</h3>
+				<ul>
+                <li>10digitphonenumber@pcs.rogers.com</li>
+                </ul>
+                <h3>Satellink</h3>
+				<ul>
+                <li>10digitpagernumber.pageme@satellink.net</li>
+                </ul>
+                <h3>Southwestern Bell</h3>
+			  	<ul>
+                <li>10digitphonenumber@email.swbw.com</li>
+              	</ul>
+                <h3>Sprint</h3>
+				<ul>
+                <li>10digitphonenumber@messaging.sprintpcs.com</li>
+                </ul>
+                <h3>Sumcom</h3>
+			  	<ul>
+                <li>10digitphonenumber@tms.suncom.com</li>
+              	</ul>
+                <h3>Surewest Communicaitons</h3>
+				<ul>
+                <li>10digitphonenumber@mobile.surewest.com</li>
+                </ul>
+                <h3>T-Mobile</h3>
+			  	<ul>
+                <li>10digitphonenumber@tmomail.net</li>
+              	</ul>
+                <h3>Telus</h3>
+				<ul>
+                <li>10digitphonenumber@msg.telus.com</li>
+                </ul>
+                <h3>Tracfone</h3>
+				<ul>
+                <li>10digitphonenumber@txt.att.net</li>
+                </ul>
+                <h3>Triton</h3>
+				<ul>
+                <li>10digitphonenumber@tms.suncom.com</li>
+                </ul>
+                <h3>Unicel</h3>
+				<ul>
+                <li>10digitphonenumber@utext.com</li>
+                </ul>
+                <h3>US Cellular</h3>
+			  	<ul>
+                <li>10digitphonenumber@email.uscc.net </li>
+              	</ul>
+                <h3>Solo Mobile</h3>
+				<ul>
+                <li>10digitphonenumber@txt.bell.ca</li>
+                </ul>
+                <h3>Sprint</h3>
+				<ul>
+                <li>10digitphonenumber@messaging.sprintpcs.com</li>
+                </ul>
+                <h3>Sumcom</h3>
+			  	<ul>
+                <li>10digitphonenumber@tms.suncom.com</li>
+              	</ul>
+                <h3>Surewest Communicaitons</h3>
+				<ul>
+                <li>10digitphonenumber@mobile.surewest.com</li>
+                </ul>
+                <h3>T-Mobile</h3>
+			  	<ul>
+                <li>10digitphonenumber@tmomail.net</li>
+              	</ul>
+                <h3>Telus</h3>
+				<ul>
+                <li>10digitphonenumber@msg.telus.com</li>
+                </ul>
+                <h3>Triton</h3>
+				<ul>
+                <li>10digitphonenumber@tms.suncom.com</li>
+                </ul>
+                <h3>Unicel</h3>
+				<ul>
+                <li>10digitphonenumber@utext.com</li>
+                </ul>
+                <h3>US Cellular</h3>
+			  	<ul>
+                <li>10digitphonenumber@email.uscc.net </li>
+              	</ul>
+                <h3>US West</h3>
+				<ul>
+                <li>10digitphonenumber@uswestdatamail.com</li>
+                </ul>
+                <h3>Verizon</h3>
+			  	<ul>
+                <li>10digitphonenumber@vtext.com</li>
+              	</ul>
+                <h3>Virgin Mobile</h3>
+				<ul>
+                <li>10digitphonenumber@vmobl.com</li>
+                </ul>
+                <h3>Virgin Mobile Canada</h3>
+			  	<ul>
+                <li>10digitphonenumber@vmobile.ca</li>
+              	</ul>
+                <h3>West Central Wireless</h3>
+				<ul>
+                <li>10digitphonenumber@sms.wcc.net</li>
+                </ul>
+                <h3>Western Wireless</h3>
+				<ul>
+                <li>10digitphonenumber@cellularonewest.com</li>
+                </ul>
+				<br />
+                
+				<h2>International Carriers</h2>
+				<br /><br />
+
+			    <h3>Chennai RPG Cellular</h3>
+	            <ul>
+               	<li>phonenumber@rpgmail.net</li>
+			    </ul>
+		   	    <h3>Chennai Skycell / Airtel</h3>
+			    <ul>
+               	<li>phonenumber@airtelchennai.com</li>
+				</ul>
+                <h3>Comviq</h3>
+				<ul>
+                <li>number@sms.comviq.se</li>
+                </ul>
+                <h3>Delhi Aritel</h3>
+			  	<ul>
+                <li>phonenumber@airtelmail.com</li>
+              	</ul>
+                <h3>Delhi Hutch</h3>
+				<ul>
+                <li>phonenumber@delhi.hutch.co.in</li>
+                </ul>  
+			    <h3>DT T-Mobile</h3>
+		        <ul>
+               	<li>phonenumber@t-mobile-sms.de</li>
+			    </ul>
+		   	    <h3>Dutchtone / Orange-NL</h3>
+			    <ul>
+               	<li>phonenumber@sms.orange.nl</li>
+				</ul>
+                <h3>EMT</h3>
+				<ul>
+                <li>phonenumber@sms.emt.ee</li>
+                </ul>
+                <h3>Escotel</h3>
+			  	<ul>
+                <li>phonenumber@escotelmobile.com</li>
+              	</ul>
+                <h3>German T-Mobile</h3>
+				<ul>
+                <li>number@t-mobile-sms.de</li>
+                </ul>  
+			    <h3>Goa BPLMobil</h3>
+		        <ul>
+               	<li>phonenumber@bplmobile.com</li>
+			    </ul>
+		   	    <h3>Golden Telecom</h3>
+			    <ul>
+               	<li>phonenumber@sms.goldentele.com</li>
+				</ul>
+                <h3>Gujarat Celforce</h3>
+				<ul>
+                <li>phonenumber@celforce.com</li>
+                </ul>
+                <h3>JSM Tele-Page</h3>
+			  	<ul>
+                <li>pinnumber@jsmtel.com</li>
+              	</ul>
+                <h3>Kerala Escotel</h3>
+				<ul>
+                <li>phonenumber@escotelmobile.com</li>
+                </ul>  
+                <h3>Kolkata Airtel</h3>
+				<ul>
+                <li>phonenumber@airtelkol.com</li>
+                </ul>
+                <h3>Kyivstar</h3>
+			  	<ul>
+                <li>number@smsmail.lmt.lv</li>
+              	</ul>
+                <h3>Lauttamus Communication</h3>
+				<ul>
+                <li>pagernumber@e-page.net</li>
+                </ul>  
+			    <h3>LMT</h3>
+		        <ul>
+               	<li>phonenumber@smsmail.lmt.lv</li>
+			    </ul>
+		   	    <h3>Maharashtra BPL Mobile</h3>
+			    <ul>
+               	<li>phonenumber@bplmobile.com</li>
+				</ul>
+                <h3>Maharashtra Idea Cellular</h3>
+				<ul>
+                <li>phonenumber@ideacellular.net</li>
+                </ul>
+                <h3>Manitoba Telecom Systems</h3>
+			  	<ul>
+                <li>phonenumber@text.mtsmobility.com</li>
+              	</ul>
+                <h3>Meteor</h3>
+				<ul>
+                <li>phonenumber@mymeteor.ie</li>
+                </ul>                  
+                <h3>MiWorld</h3>
+				<ul>
+                <li>phonenumber@m1.com.sg</li>
+                </ul>
+                <h3>Mobileone</h3>
+			  	<ul>
+                <li>phonenumber@m1.com.sg</li>
+              	</ul>
+                <h3>Mobilfone</h3>
+				<ul>
+                <li>phonenumber@page.mobilfone.com</li>
+                </ul>  
+			    <h3>Mobility Bermuda</h3>
+		        <ul>
+               	<li>phonenumber@ml.bm</li>
+			    </ul>
+		   	    <h3>Mobistar Belgium</h3>
+			    <ul>
+               	<li>phonenumber@mobistar.be</li>
+				</ul>
+                <h3>Mobitel Tanzania</h3>
+				<ul>
+                <li>phonenumber@sms.co.tz</li>
+                </ul>
+                <h3>Mobtel Srbija</h3>
+			  	<ul>
+                <li>phonenumber@mobtel.co.yu</li>
+              	</ul>
+                <h3>Movistar</h3>
+				<ul>
+                <li>number@correo.movistar.net</li>
+                </ul>  
+                <h3>Mumbai BPL Mobile</h3>
+				<ul>
+                <li>phonenumber@bplmobile.com</li>
+                </ul>
+                <h3>Netcom</h3>
+			  	<ul>
+                <li>phonenumber@sms.netcom.no</li>
+              	</ul>
+                <h3>Ntelos</h3>
+				<ul>
+                <li>number@pcs.ntelos.com</li>
+                </ul>  
+			    <h3>O2</h3>
+		        <ul>
+               	<li>name@o2.co.uk</li>
+			    </ul>
+		   	    <h3>O2</h3>
+			    <ul>
+               	<li>number@o2imail.co.uk</li>
+				</ul>
+                <h3>O2 (M-mail)</h3>
+				<ul>
+                <li>number@mmail.co.uk</li>
+                </ul>
+                <h3>One Connect Austria</h3>
+			  	<ul>
+                <li>phonenumber@onemail.at</li>
+              	</ul>
+                <h3>OnlineBeep</h3>
+				<ul>
+                <li>10digitphonenumber@onlinebeep.net</li>
+                </ul>  
+                <h3>Optus Mobile</h3>
+				<ul>
+                <li>phonenumber@optusmobile.com.au</li>
+                </ul>
+                <h3>Orange</h3>
+			  	<ul>
+                <li>phonenumber@orange.net</li>
+              	</ul>
+                <h3>Orange Mumbai</h3>
+				<ul>
+                <li>phonenumber@orangemail.co.in</li>
+                </ul>  
+			    <h3>Orange  NL / Dutchtone</h3>
+		        <ul>
+               	<li>phonenumber@sms.orange.nl</li>
+			    </ul>
+		   	    <h3>Oskar</h3>
+			    <ul>
+               	<li>phonenumber@mujoskar.cz</li>
+				</ul>
+                <h3>P&amp;T Luxembourg</h3>
+				<ul>
+                <li>phonenumber@sms.luxgsm.lu</li>
+                </ul>
+                <h3>Personal Communication</h3>
+			  	<ul>
+                <li>sms@pcom.ru (put the number in the subject line)</li>
+              	</ul>
+                <h3>Pondicherry BPL Mobile</h3>
+				<ul>
+                <li>phonenumber@bplmobile.com</li>
+                </ul>  
+                <h3>Primtel</h3>
+				<ul>
+                <li>phonenumber@sms.primtel.ru</li>
+                </ul>
+                <h3>Safaricom</h3>
+			  	<ul>
+                <li>phonenumber@safaricomsms.com</li>
+              	</ul>
+                <h3>Satelindo GSM</h3>
+				<ul>
+                <li>phonenumber@satelindogsm.com</li>
+                </ul>  
+			    <h3>SCS-900</h3>
+		        <ul>
+               	<li>phonenumber@scs-900.ru</li>
+			    </ul>
+		   	    <h3>SFR France</h3>
+			    <ul>
+               	<li>phonenumber@sfr.fr</li>
+				</ul>
+                <h3>Simple Freedom</h3>
+				<ul>
+                <li>phonenumber@text.simplefreedom.net</li>
+                </ul>
+                <h3>Smart Telecom</h3>
+			  	<ul>
+                <li>phonenumber@mysmart.mymobile.ph</li>
+              	</ul>
+                <h3>Southern LINC</h3>
+				<ul>
+                <li>10digitphonenumber@page.southernlinc.com</li>
+                </ul>  
+                <h3>Sunrise Mobile</h3>
+				<ul>
+                <li>phonenumber@mysunrise.ch</li>
+                </ul>
+                <h3>Sunrise Mobile</h3>
+			  	<ul>
+                <li>10digitphonenumber@swmsg.com</li>
+              	</ul>
+                <h3>Surewest Communications</h3>
+				<ul>
+                <li>phonenumber@freesurf.ch</li>
+                </ul>  
+			    <h3>Swisscom</h3>
+		        <ul>
+               	<li>phonenumber@bluewin.ch</li>
+			    </ul>
+		   	    <h3>T-Mobile Austria</h3>
+			    <ul>
+               	<li>phonenumber@sms.t-mobile.at</li>
+				</ul>
+                <h3>T-Mobile Germany</h3>
+				<ul>
+                <li>phonenumber@t-d1-sms.de</li>
+                </ul>
+                <h3>T-Mobile UK</h3>
+			  	<ul>
+                <li>phonenumber@t-mobile.uk.net</li>
+              	</ul>
+                <h3>Tamil Nadu BPL Mobile</h3>
+				<ul>
+                <li>phonenumber@bplmobile.com</li>
+                </ul>  
+                <h3>Tele2 Latvia</h3>
+				<ul>
+                <li>phonenumber@sms.tele2.lv</li>
+                </ul>
+                <h3>Telefonica Movistar</h3>
+			  	<ul>
+                <li>phonenumber@movistar.net</li>
+              	</ul>
+                <h3>Telenor</h3>
+				<ul>
+                <li>phonenumber@mobilpost.no</li>
+                </ul>  
+			    <h3>Teletouch</h3>
+		        <ul>
+               	<li>10digitpagernumber@pageme.teletouch.com</li>
+			    </ul>
+		   	    <h3>Telia Denmark</h3>
+			    <ul>
+               	<li>phonenumber@gsm1800.telia.dk</li>
+				</ul>
+                <h3>TIM</h3>
+				<ul>
+                <li>10digitphonenumber@timnet.com</li>
+                </ul>
+                <h3>TSR Wireless</h3>
+			  	<ul>
+                <li>pagernumber@alphame.com</li>
+              	</ul>
+                <h3>UMC</h3>
+				<ul>
+                <li>phonenumber@sms.umc.com.ua</li>
+                </ul>                
+                <h3>Uraltel</h3>
+				<ul>
+                <li>phonenumber@sms.uraltel.ru</li>
+                </ul>
+                <h3>Uttar Pradesh Escotel</h3>
+			  	<ul>
+                <li>phonenumber@escotelmobile.com</li>
+              	</ul>
+                <h3>Vessotel</h3>
+				<ul>
+                <li>phonenumber@pager.irkutsk.ru</li>
+                </ul>  
+			    <h3>Vodafone Italy</h3>
+		        <ul>
+               	<li>number@sms.vodafone.it</li>
+			    </ul>
+		   	    <h3>Vodafone Japan</h3>
+			    <ul>
+               	<li>phonenumber@c.vodafone.ne.jp</li>
+				</ul>
+                <h3>Vodafone Japan</h3>
+				<ul>
+                <li>phonenumber@h.vodafone.ne.jp</li>
+                </ul>
+                <h3>Vodafone Japan</h3>
+			  	<ul>
+                <li>phonenumber@t.vodafone.ne.jp</li>
+              	</ul>
+                <h3>Vodafone UK</h3>
+				<ul>
+                <li>phonenumber@vodafone.net</li>
+                </ul>                
+                <h3>Wyndtell</h3>
+				<ul>
+                <li>number@wyndtell.com</li>
+                </ul>
+			  	<br />
+                
+                <h2>Old US & Canadian Carriers (Most Not In Use)</h2>
+				<br /><br />
+
+			    <h3>Advantage Communications</h3>
+			    <ul>
+               	<li>10digitpagernumber@advantagepaging.com</li>
+				</ul>
+			    <h3>Airtouch Pagers</h3>
+			    <ul>
+               	<li>10digitpagernumber@myairmail.com</li>
+				</ul>
+			    <h3>AlphaNow</h3>
+			    <ul>
+               	<li>pin@alphanow.net</li>
+				</ul>
+			    <h3>Ameritech Paging</h3>
+			    <ul>
+               	<li>10digitpagernumber@paging.acswireless.com</li>
+				</ul>
+			    <h3>American Messaging</h3>
+			    <ul>
+               	<li>10digitpagernumber@page.americanmessaging.net</li>
+				</ul>
+			    <h3>Ameritech Clearpath</h3>
+			    <ul>
+               	<li>10digitpagernumber@clearpath.acswireless.com</li>
+				</ul> 
+			    <h3>Arch Pagers (PageNet)</h3>
+			    <ul>
+               	<li>10digitpagernumber@archwireless.net</li>
+				</ul>
+			    <h3>AT&amp;T</h3>
+			    <ul>
+               	<li>10digitphonenumber@mobile.att.net</li>
+				</ul>
+			    <h3>AT&amp;T Free2Go</h3>
+			    <ul>
+               	<li>10digitphonenumber@mmode.com</li>
+				</ul>
+			    <h3>AT&amp;T PCS</h3>
+			    <ul>
+               	<li>10digitphonenumber@mobile.att.net</li>
+				</ul>
+			    <h3>AT&amp;T Pocketnet PCS</h3>
+			    <ul>
+               	<li>10digitphonenumber@dpcs.mobile.att.net</li>
+				</ul>
+			    <h3>Beepwear</h3>
+			    <ul>
+               	<li>10digitphonenumber@beepwear.net</li>
+				</ul> 
+			    <h3>Bell Atlantic</h3>
+			    <ul>
+               	<li>10digitphonenumber@message.bam.com</li>
+				</ul>
+			    <h3>Bell South</h3>
+			    <ul>
+               	<li>10digitphonenumber@wireless.bellsouth.com</li>
+				</ul>
+			    <h3>Bell South (Blackberry)</h3>
+			    <ul>
+               	<li>10digitphonenumber@bellsouthtips.com</li>
+				</ul>
+			    <h3>Bell South Mobility</h3>
+			    <ul>
+               	<li>10digitphonenumber@blsdcs.net</li>
+				</ul>
+			    <h3>Cellular One (East Coast)</h3>
+				<ul>
+                <li>10digitphonenumber@phone.cellone.net</li>
+                </ul>
+                <h3>Cellular One (South West)</h3>
+			  	<ul>
+                <li>10digitphonenumber@swmsg.com</li>
+              	</ul>
+                <h3>Cellular One</h3>
+				<ul>
+                <li>10digitphonenumber@cellularone.txtmsg.com</li>
+                </ul>
+                <h3>Cellular One</h3>
+				<ul>
+                <li>10digitphonenumber@cellularone.textmsg.com</li>
+                </ul>
+                <h3>Cellular One</h3>
+			  	<ul>
+                <li>10digitphonenumber@cell1.textmsg.com</li>
+              	</ul>
+                <h3>Cellular One</h3>
+				<ul>
+                <li>10digitphonenumber@sbcemail.com</li>
+                </ul>
+                <h3>Cellular One (West)</h3>
+		  	  	<ul>
+                <li>10digitphonenumber@mycellone.com</li>
+           	  	</ul>
+                <h3>Central Vermont Communications</h3>
+			    <ul>
+               	<li>10digitpagernumber@cvcpaging.com</li>
+				</ul>
+			    <h3>Cingular</h3>
+			    <ul>
+               	<li>10digitphonenumber@cingularme.com</li>
+			    </ul>			    
+                <h3>Communication Specialists</h3>
+			    <ul>
+               	<li>7digitpin@pageme.comspeco.net</li>
+				</ul>
+			    <h3>Cook Paging</h3>
+			    <ul>
+               	<li>10digitpagernumber@cookmail.com</li>
+				</ul>
+			    <h3>Corr Wireless Communications</h3>
+			    <ul>
+               	<li>10digitphonenumber@corrwireless.net</li>
+				</ul>
+			    <h3>Digi-Page / Page Kansas</h3>
+			    <ul>
+               	<li>10digitpagernumber@page.hit.net</li>
+				</ul>
+			    <h3>Galaxy Corporation</h3>
+			    <ul>
+               	<li>10digitpagernumber.epage@sendabeep.net</li>
+				</ul>
+			    <h3>GCS Paging</h3>
+			    <ul>
+               	<li>10digitpagernumber@webpager.us</li>
+			    </ul> 			    
+                <h3>GrayLink / Porta-Phone</h3>
+			    <ul>
+               	<li>10digitpagernumber@epage.porta-phone.com</li>
+				</ul>
+			    <h3>GTE</h3>
+			    <ul>
+               	<li>10digitphonenumber@airmessage.net</li>
+				</ul>
+			    <h3>GTE</h3>
+			    <ul>
+               	<li>10digitphonenumber@gte.pagegate.net</li>
+				</ul>
+			    <h3>GTE</h3>
+			    <ul>
+               	<li>10digitphonenumber@messagealert.com</li>
+				</ul>
+			    <h3>Infopage Systems</h3>
+			    <ul>
+               	<li>pinnumber@page.infopagesystems.com</li>
+				</ul>
+			    <h3>Indiana Paging Co</h3>
+			    <ul>
+               	<li>10digitphonenumber@inlandlink.com</li>
+			    </ul> 			    
+                <h3>MCI</h3>
+			    <ul>
+               	<li>10digitphonenumber@pagemci.com</li>
+				</ul>
+			    <h3>Metrocall</h3>
+			    <ul>
+               	<li>10digitphonenumber@page.metrocall.com</li>
+				</ul>
+			    <h3>Mobilecom PA</h3>
+			    <ul>
+               	<li>10digitphonenumber@page.mobilcom.net</li>
+				</ul>
+			    <h3>Morris Wireless</h3>
+			    <ul>
+               	<li>10digitpagernumber@beepone.net</li>
+				</ul>
+			    <h3>Motient</h3>
+			    <ul>
+               	<li>10digitphonenumber@isp.com</li>
+				</ul>
+			    <h3>Nextel</h3>
+			    <ul>
+               	<li>10digitphonenumber@page.nextel.com</li>
+			    </ul> 			    
+			    <h3>Omnipoint</h3>
+			    <ul>
+               	<li>10digitphonenumber@omnipointpcs.com</li>
+				</ul>
+			    <h3>Pacific Bell</h3>
+			    <ul>
+               	<li>10digitphonenumber@pacbellpcs.net</li>
+				</ul>
+			    <h3>PageMart</h3>
+			    <ul>
+               	<li>7digitpinnumber@pagemart.net</li>
+				</ul>
+			    <h3>PageMart Canada</h3>
+			    <ul>
+               	<li>10digitpagernumber@pmcl.net</li>
+				</ul>
+			    <h3>PageNet Canada</h3>
+			    <ul>
+               	<li>10digitphonenumber@pagegate.pagenet.ca</li>
+			    </ul> 			    
+                <h3>PageOne Northwest</h3>
+			    <ul>
+               	<li>10digitphonenumber@page1nw.com</li>
+				</ul>
+			    <h3>PCS One</h3>
+			    <ul>
+               	<li>10digitphonenumber@pcsone.net</li>
+				</ul>
+			    <h3>Powertel</h3>
+			    <ul>
+               	<li>10digitphonenumber@voicestream.net</li>
+				</ul>
+			    <h3>Price Communications</h3>
+			    <ul>
+               	<li>10digitphonenumber@mobilecell1se.com</li>
+				</ul>
+			    <h3>Primeco</h3>
+			    <ul>
+               	<li>10digitphonenumber@email.uscc.net</li>
+				</ul>
+			    <h3>ProPage</h3>
+			    <ul>
+               	<li>7digitpagernumber@page.propage.net</li>
+			    </ul> 			    
+                <h3>Qualcomm</h3>
+			    <ul>
+               	<li>name@pager.qualcomm.com</li>
+				</ul>
+			    <h3>RAM Page</h3>
+			    <ul>
+               	<li>number@ram-page.com</li>
+				</ul>
+			    <h3>SBC Ameritech Paging</h3>
+			    <ul>
+               	<li>10digitpagernumber@paging.acswireless.com</li>
+			    </ul>
+		  	    <h3>Skytel Pagers</h3>
+			    <ul>
+               	<li>10digitphonenumber@email.skytel.com</li>
+				</ul>	
+			    <h3>ST Paging</h3>
+			    <ul>
+               	<li>pin@page.stpaging.com</li>
+				</ul>
+			    <h3>Verizon Pagers</h3>
+			    <ul>
+               	<li>10digitpagernumber@myairmail.com</li>
+				</ul>
+			    <h3>Verizon PCS</h3>
+			    <ul>
+               	<li>10digitphonenumber@myvzw.com</li>
+			    </ul> 			    
+                <h3>VoiceStream</h3>
+			    <ul>
+               	<li>10digitphonenumber@voicestream.net</li>
+				</ul>
+			    <h3>WebLink Wireless</h3>
+			    <ul>
+               	<li>10digitphonenumber@@airmessage.net</li>
+				</ul>
+			    <h3>WebLink Wireless</h3>
+			    <ul>
+               	<li>10digitphonenumber@pagemart.net</li>
+				</ul>
+			    <h3>West Central Wireless</h3>
+			    <ul>
+               	<li>10digitphonenumber@sms.wcc.net</li>
+			    </ul>
+
+                
+			</div>
+		</div>
+
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li>
+				<h2>Bookmark Us</h2>
+				<ul>
+					<li><a href="#" onmousedown="Bookmark('EmailTextMessages.com - Email-To-SMS Addresses','http://www.emailtextmessages.com/')">Bookmark This Site</a></li>
+					<li><a href="javascript:location.href='http://del.icio.us/post?v=2&amp;url='+encodeURIComponent(document.location.href)+'&amp;title='+encodeURIComponent(document.title)+' '">Post To Del.icio.us</a></li>
+					<li><a href="javascript:location.href='http://www.stumbleupon.com/submit?url='+encodeURIComponent(document.location.href)+' '">Post To Stumbleupon</a></li>
+                    <li><a href="javascript:location.href='http://www.furl.net/storeIt.jsp?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title)+' '">Post To Furl.net</a></li>
+                    <li><a href="javascript:location.href='http://digg.com/submit?phase=2&amp;url='+encodeURIComponent(document.location.href)+' '">Digg This Site</a></li>
+                    <li><a href="http://www.addthis.com/bookmark.php" onclick="window.open('http://www.addthis.com/bookmark.php?pub=&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'addthis'); return false;" title="Bookmark!" target="_blank">More Social Bookmarking</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Google</h2>
+				<ul>
+                <li><script type="text/javascript"><!--
+google_ad_client = "pub-4123094101252736";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_channel = "";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "CC0000";
+google_color_text = "333333";
+google_color_url = "356AA0";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></li>
+				</ul>
+			</li>
+			<li>
+				<h2>Links</h2>
+				<ul>
+					<li><a href="http://www.spoofcard.com/">Fake Your Caller ID Number</a></li>
+                    <li><a href="http://www.spoofcard.com/home/">Anonymous Phone Calls</a></li>
+				</ul>
+			</li>
+        	<li>
+				<h2>Sponsors</h2>
+				<ul>
+					<li><a href="http://www.spoofcard.com/?utm_source=lc&utm_medium=Affiliate" ></a></li>
+                </ul>
+			</li>
+		</ul>
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end sidebar -->
+</div>
+<!-- end page -->
+<div id="footer">
+	<p id="legal">&copy;2007 EmailTextMessages.com. All Rights Reserved. | Designed by Free CSS Templates Dot Org.</p>
+  <p id="links"><a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></p>
+</div>
+</body>
+</html>

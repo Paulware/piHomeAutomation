@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gauge Test</title>
+<script src="gauge.min.js"></script>
+<style>
+body{padding:0;margin:0}
+</style>
+</head>
+<body>
+
+<h1>Simple Example of CanvGauge - pure HTML5/JavaScript gauge implementation</h1>
+
+<p>Please, refer to a source code of this page to get a clue how it works.</p>
+
+	<canvas id="gauge1"></canvas>
+	<canvas id="gauge2"></canvas>
+	<canvas id="gauge3"></canvas>
+	<div id="console"></div>
+<script>
+var gauge1 = new Gauge({
+	renderTo  : 'gauge1',
+	width     : 300,
+	height    : 300,
+	glow      : true,
+	units     : 'Fahrenheit',
+	title     : 'Temperature'
+});
+
+gauge1.onready = function() {
+	setInterval( function() {
+		gauge1.setValue( Math.random() * 100);
+	}, 1000);
+};
+
+gauge1.draw();
+
+var gauge2 = new Gauge({
+	renderTo  : 'gauge2',
+	width     : 300,
+	height    : 300,
+	glow      : true,
+	units     : 'Fahrenheit',
+	title     : 'Kitchen',
+	strokeTicks : false,
+	highlights : [
+ {
+		from  : 0,
+		to    : 32,
+		color : 'Blue'
+	}, 
+ {
+		from  : 32,
+		to    : 65,
+		color : 'Khaki'
+	}, 
+ {
+		from  : 65,
+		to    : 76,
+		color : 'PaleGreen'
+	}, 
+ {
+		from  : 76,
+		to    : 100,
+		color : 'LightSalmon'
+	}
+ ],
+	animation : {
+		delay : 10,
+		duration: 300,
+		fn : 'bounce'
+	}
+});
+
+gauge2.onready = function() {
+	setInterval( function() {
+		gauge2.setValue( Math.random() * 100);
+	}, 1000);
+};
+
+gauge2.draw();
+
+var gauge3 = new Gauge({
+	renderTo   : 'gauge3',
+	width      : 400,
+	height     : 400,
+	maxValue   : 1000,
+	majorTicks : ['0','100','200','300','400','500','600','700','800','900','1000'],
+	glow       : true,
+	units      : 'Kelvin',
+	title      : 'Temp',
+	highlights : false,
+	glow : false,
+	valueFormat : { int : 4, dec : 1 },
+	colors : {
+		needle : { start : 'lightgreen', end : 'navy' },
+		plate : 'lightyellow',
+		title : 'green',
+		units : 'lightgreen',
+		majorTicks : 'darkgreen',
+		minorTicks : 'lightgreen',
+		numbers : 'darkgreen'
+	},
+	animation : {
+		delay : 25,
+		duration: 500,
+		fn : 'elastic'
+	}
+});
+
+gauge3.onready = function() {
+	setInterval( function() {
+		gauge3.setValue( Math.random() * 1000);
+	}, 1000);
+};
+gauge3.draw();
+</script>
+
+</body>
+</html>

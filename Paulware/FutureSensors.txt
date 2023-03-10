@@ -1,0 +1,16 @@
+Futurific projects
+
+   Step by step instructables and videos for instruction and advertisement
+   Camera sensor that will place photo on the cloud and then send text/email
+   Trigger Camera from other sensor (movement, sound, button)
+   Control outlets from server
+   Control lights from server
+   Voice command sensor (android device) which sends command to server
+   Relays component for irrigation
+   PH meter for pools/hot tubs
+   soil moisture content to allow plants to use IM (water me)
+   Face recognition camera to notify when family members arrive home
+   Remote relay to start car based on time/day of week
+   Mailman sensor (mail arrived)
+   Graphing sensor history (temperature/humidity)
+   

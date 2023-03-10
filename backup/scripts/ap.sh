@@ -51,7 +51,7 @@ echo "  dhcp-range=192.168.4.2,192.168.4.102,255.255.255.0,72h" >> /etc/dnsmasq.
 cat > /etc/hostapd/hostapd.conf <<EOF
 interface=wlan0
 driver=nl80211
-ssid=ap1
+ssid=pi4
 hw_mode=g
 channel=7
 wmm_enabled=0
@@ -92,4 +92,4 @@ sudo systemctl unmask hostapd
 sudo systemctl enable hostapd
 sudo systemctl start hostapd
 
-echo "after reboot your ssid (wod1, password:ABCD1234) should appear"
+echo "after reboot your ssid (pi4, password:ABCD1234) should appear"

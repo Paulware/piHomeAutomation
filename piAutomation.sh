@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo "Must be root"
+  exit
+fi
+
 #------------------------------------------------------------------------------
 # update_file filename "Find String" "Replace String"
 function update_file() {
@@ -7,12 +12,29 @@ function update_file() {
   mv /f $1
 }
 
+
+function pause(){
+ read -s -n 1 -p "Press any key to continue . . ."
+ echo ""
+}
+
+#------------------------------------------------------------------------------
+# return true if line exists
+function line_exists_in () {
+   if grep -Fxq "$2" $1
+   then
+      return 0
+   else
+      return 1
+   fi
+}
+
 #------------------------------------------------------------------------------
 function accessPoint ()
 {
-  if (whiptail --title "set wireless access point" --yesno "" 8 65 --yes-button "Yes" --no-button "Cancel" ) then 
-     read -p "Enter SSID name for the access point" SSID
-  
+  if (whiptail --title "set wireless access point note this can only be run from terminal..." --yesno "" 8 65 --yes-button "Yes" --no-button "Cancel" ) then 
+     # read -p "Enter SSID name for the access point" SSID
+     SSID=pi4
      apt-get install dnsmasq hostapd -y
 
      echo "turn off services"
@@ -90,13 +112,31 @@ function do_anykey ()
 #------------------------------------------------------------------------------
 function copy_directories ()
 {
-  if (whiptail --title "Make and copy directories" --yesno "" 8 65 --yes-button "Yes" --no-button "Cancel" ) then
+  if (whiptail --title "Make and copy directories, make Tables" --yesno "" 8 65 --yes-button "Yes" --no-button "Cancel" ) then
     echo "#Copy directories"
-    cd /boot
-    cp -R Paulware /var/www/html
+    # cd /boot
+    # cp -R Paulware /var/www/html
+    #cd /var/www/html
+    #chmod +x *.*
+    #echo "Directories copied...."   
+    
+    
+    # Create database and user: root
+    mysql -uroot -ppi -e "CREATE DATABASE Paulware /*\!40100 DEFAULT CHARACTER SET utf8 */;"
+    mysql -uroot -ppi -e "CREATE USER 'root'@'%' IDENTIFIED BY 'pi';"
+    mysql -uroot -ppi -e "GRANT ALL PRIVILEGES ON Paulware.* TO 'root'@'%' WITH GRANT OPTION;"
+    mysql -uroot -ppi -e "Update mysql.user set plugin='';"
+    mysql -uroot -ppi -e "SELECT User, Host, plugin FROM mysql.user;"
+    mysql -uroot -ppi -e "FLUSH PRIVILEGES;"
+
+    # Move paulware directory to /var/www/html/Paulware
+    rm -rf /var/www/html/Paulware
+    cp -r /boot/Paulware /var/www/html/Paulware
     cd /var/www/html
     chmod +x *.*
-    echo "Directories copied...."   
+
+    # create database tables
+    php /var/www/html/Paulware/makeTables.php    
     pause
   fi
 }
@@ -110,7 +150,7 @@ function do_ssh ()
     # permit root ssh login
     update_file /etc/ssh/sshd_config "#PermitRootLogin prohibit-password" "PermitRootLogin yes"
     sudo echo "root:raspberry" | sudo chpasswd
-    sudo echo "pi:goaway" | sudo chpasswd
+    # sudo echo "pi:goaway" | sudo chpasswd
     echo "ssh is enabled"
     echo "This works as long as you have root access..."
     do_anykey
@@ -137,7 +177,7 @@ function extraYo()
    -- Select Apache2 when prompted and press the Enter key
    -- Configuring phpmyadmin? OK
    -- Configure database for phpmyadmin with dbconfig-common? Yes
-   -- Type your password (raspberry) and press OK
+   -- Type your password raspberry and press OK
    
    -- sudo phpenmod mysqli
    -- sudo service apache2 restart
@@ -181,15 +221,50 @@ function do_lamp()
     sudo service apache2 restart
 }
 
+function do_crontab () 
+{
+   echo "Adding * * * * * /usr/bin/python /var/www/html/Paulware/broadcastAddress.py to crontab"
+   echo "MAILTO=\"\"" > mycron
+   echo "* * * * * /usr/bin/python /var/www/html/Paulware/broadcastAddress.py" >> mycron
+   echo "* * * * * cd /var/www/html/Paulware;php timer.php" >> mycron
+   echo "0 3 * * * /sbin/shutdown -r + 5" >> mycron
+   crontab mycron
+   rm mycron
+   pause
+}
+
+function makeTables () 
+{
+   cd /var/www/html/Paulware
+   php makeTables.php 
+   pause
+}
+
+function do_update() 
+{
+    echo "apt-get update"
+    sudo apt-get update
+    pause
+}
+
+function do_reboot() 
+{ 
+    reboot 
+}
+
 #------------------------------------------------------------------------------
 function do_main_menu ()
 {
-  SELECTION=$(whiptail --title "Pi4 WOD Main Menu" --menu "Arrow/Enter Selects or Tab Key" 0 0 0 --cancel-button Quit --ok-button Select \
-  "a WIFI AP" "Wireless AccessPoint install" \
-  "b SSH" "Enable SSH" \
-  "c cp dirs" "Copy Paulware directory" \
+  SELECTION=$(whiptail --title "Run 0,1,2 on new sd card, then connect wifi for other tasks" --menu "Arrow/Enter Selects or Tab Key" 0 0 0 --cancel-button Quit --ok-button Select \
+  "0 Update" "apt-get update" \
+  "1 SSH" "Enable SSH" \
+  "2 WIFI AP" "Wireless AccessPoint install" \
   "l LAMP" "Install Apache, SQL, PHP" \
-  "z QUIT" "Exit menubox.sh" 3>&1 1>&2 2>&3)
+  "c cp dirs" "Copy Paulware directory and make tables " \
+  "d crontab" "Create CRONTAB tasks" \
+  "m tables" "Make database tables" \
+  "r reboot" "Reboot the system" \
+  "z QUIT" "Exit piAutomation.sh" 3>&1 1>&2 2>&3)
   
 
   RET=$?
@@ -197,10 +272,14 @@ function do_main_menu ()
     exit 0
   elif [ $RET -eq 0 ]; then
     case "$SELECTION" in
-      a\ *) accessPoint ;; 
-      b\ *) do_ssh ;; 
-      c\ *) copy_directories ;;
+      0\ *) do_update ;;    
+      1\ *) do_ssh ;; 
+      2\ *) accessPoint ;; 
       l\ *) do_lamp ;; 
+      c\ *) copy_directories ;;
+      d\ *) do_crontab ;; 
+      m\ *) makeTables ;; 
+      r\ *) do_reboot ;;
       z\ *) clear
             exit 0 ;;
          *) whiptail --msgbox "Programmer error: unrecognized option" 20 60 1 ;;
@@ -213,6 +292,7 @@ function do_main_menu ()
 #                                Main Script
 #------------------------------------------------------------------------------
 if [ $# -eq 0 ] ; then
+
   while true; do
      do_main_menu
   done
