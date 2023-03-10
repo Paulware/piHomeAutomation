@@ -123,8 +123,8 @@ function copy_directories ()
     
     # Create database and user: root
     mysql -uroot -ppi -e "CREATE DATABASE Paulware /*\!40100 DEFAULT CHARACTER SET utf8 */;"
-    mysql -uroot -ppi -e "CREATE USER 'root'@'%' IDENTIFIED BY 'pi';"
-    mysql -uroot -ppi -e "GRANT ALL PRIVILEGES ON Paulware.* TO 'root'@'%' WITH GRANT OPTION;"
+    mysql -uroot -ppi -e "SET PASSWORD for 'root'@'localhost' = PASSWORD ('pi');"
+    mysql -uroot -ppi -e "GRANT ALL PRIVILEGES ON Paulware.* TO 'root'@'localhost' WITH GRANT OPTION;"
     mysql -uroot -ppi -e "Update mysql.user set plugin='';"
     mysql -uroot -ppi -e "SELECT User, Host, plugin FROM mysql.user;"
     mysql -uroot -ppi -e "FLUSH PRIVILEGES;"
