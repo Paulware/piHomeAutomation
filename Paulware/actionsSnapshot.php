@@ -1,6 +1,6 @@
 <html>
 <body>
-Make a snapshot of the current actions<br>
+Make a snapshot of the current actions, and sensors table<br>
 <?php 
   include "common.inc";
   include "common.php";
