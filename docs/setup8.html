@@ -1,0 +1,33 @@
+# Create 16gb sd card with basic raspberry pi image <p>
+1. Copy Raspberry Pi Os located at url: https://www.raspberrypi.com/software/operating-systems/<br>
+   Select option for "Testing on Raspberry Pi OS with desktop and recommended software" : Feb 21 2023 (2.7 gb) <br>
+   download using the link: link: https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2023-02-22/2023-02-21-raspios-bullseye-armhf-full.img.xz
+<p>
+2. extract 2023-02-21-raspios-bullseye-armhf-full.img.xz to<br>
+   2023-02-21-raspios-bullseye-armf-full.img (which is a directory) <br>
+      which contains 2023-02-21-raspios-bullseye-armf-full.img (which is a file)<br>
+<p>
+3. Download and install win32diskimager from https://sourceforge.net/projects/win32diskimager/files/latest/download
+<p>  
+4. create 16gb sd card with 2023-02-21-raspios-bullseye-armf-full.img and win32diskimager
+<p>
+5. Copy Paulware directory and piHomeAutomation.sh to sd card /boot directory using windows explorer
+<p>
+6. Place sd card in pi4, connected to the internet and power up for the first time, answering setup questions (do not update software)
+<p>
+7. Restart the system and bring up a screen terminal, enter these commands: cd /boot, sudo ./piAutomation.sh
+<p>
+8. Select these options in order: 0, 1, 2
+<p>
+9. Reboot the system, now connect to the wifi accesspoint: pi4, password ABCD1234.
+<p>
+10. Using putty, connect to ip address: 192.168.4.1, user: root, password: raspberry
+<p>
+11. cd /boot, ./piAutomation.sh, select options in this order: l, c, (there will be errors), c (again this time no errors), d, m (not sure if this is necessary)
+<p>
+12. reboot
+<p>
+13. Connect wifi again to pi4, open a browser page to 192.168.4.1/Paulware/index.php, Home Automation Center should be displayed.
+<p>
+This concludes the setup 
+  
