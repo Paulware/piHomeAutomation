@@ -1,5 +1,3 @@
-
-
 # Connection
 import network
 import ubinascii
@@ -11,6 +9,7 @@ from LED import LED
 
 import usocket as socket
 import ustruct as struct
+import ubinascii
 
 class Connection:
 
@@ -24,6 +23,7 @@ class Connection:
         self.station.active(True) 
         self.led = LED()
         self.connectWifi()                 
+        self.mac = ubinascii.hexlify(self.station.config('mac')).decode().upper()
         self.print ( 'Done init Connection')
 
     def print (self,msg,delay=0.5): 
@@ -60,22 +60,6 @@ class Connection:
        except Exception as ex:
           Utilities.print ( 'Could not Connection.reset because: ' + str(ex)) 
           machine.reset()         
-          
-    def connectNTP (self): 
-       Utilities.print ( 'connectNTP')
-       endTime = utime.ticks_ms() + 30000 # try for 30 seconds to connect to ntp 
-       while utime.ticks_ms() < endTime: 
-          try: 
-             Utilities.print ( 'Get ntptime' )
-             ntptime.host = 'us.pool.ntp.org'
-             ntptime.settime()
-             Utilities.print ( self.ssid + ' connected: ' + str(self.station.ifconfig()))
-             self.led.set (1,0,1) # blue
-             break
-          except Exception as ex:
-             Utilities.print ( 'Trouble with ntptime: ' + str(ex) )
-             self.led.set (0,1,1) # red
-       Utilities.print ( 'Done in connectNTP')
                        
     def WLANreset(self):
        Utilities.print ( 'Connection, resetting')   
@@ -120,11 +104,6 @@ class Connection:
        except Exception as ex: 
           Utilities.print ( 'Connection issue: ' + str(ex))
           self.reset()
-              
-       self.connectNTP()   
-
-        
-
 
 
 

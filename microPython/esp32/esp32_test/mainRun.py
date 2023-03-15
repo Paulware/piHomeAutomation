@@ -5,12 +5,13 @@ try:
    import ubinascii
    import network
    import machine
-   from Connection import Connection 
    from ubinascii import hexlify
    import utime
+   import urequests
+   
+   from Connection import Connection 
    from Utilities import Utilities
    from LED import LED
-   import urrequests
    
 except Exception as ex:
    print ( 'Could not import because: ' + str(ex)) 
@@ -32,30 +33,34 @@ led.purple()
 utilities = Utilities()
    
 #Change these to match your system   
-ssid     = 'BlackCheetah2' 
-password = 'ZPGMXpEezQ'
+ssid     = 'pi4'   
+password = 'ABCD1234' 
+# Note: If device is not logging into the pi's wifi, the server address will be different
+serverAddress = '192.168.4.1' # pi's built in wifi 
 
 connection = Connection (ssid, password )
 
 if network.WLAN().isconnected(): 
    led.blue()
-   print ( 'I am connected' )
-   MAC = '1234'
    fahrenheit = '98.6'
-   url = '/Paulware/updateSensor.php?MAC=' + str(MAC) + \
-         '&value=' + str(fahrenheit) + ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
-   print (url)
+   print ( 'mac: ' + connection.mac )
+   print ( 'serverAddress: ' + serverAddress )
+   url = 'http://' + serverAddress + \
+         '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
+         '&value=' + str(fahrenheit) + \
+         ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
    r = urequests.get(url)
-   print ( 'done with request')
 else:
    print ( 'I am not WLAN connected') 
    
+
 timeout = 0
 count = 0
 greenTimeout = 0
 wasConnected = False 
 timeout = 0
 greenTimeout = 0 
+print ( 'Running infinite loop' )
 while True:
   if network.WLAN().isconnected(): 
      if led.state == 1:
