@@ -166,7 +166,6 @@ function do_ssh ()
 #------------------------------------------------------------------------------
 function do_lamp() 
 {
-    sudo apt-get update
     sudo apt install apache2 -y
     cd /var/www/html
     ls -al
