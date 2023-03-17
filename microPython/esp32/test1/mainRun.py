@@ -64,7 +64,11 @@ while True:
               '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
               '&value=' + str(temperature) + \
               ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
-        r = urequests.get(url)
+        try: 
+           r = urequests.get(url)
+        except Exception as ex: 
+           print ( 'Could not request url because:' + str(ex)) 
+          
         print ( 'sensor updated ' + str(temperature)) 
   else: 
      led.red() 
