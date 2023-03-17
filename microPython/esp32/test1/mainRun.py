@@ -1,17 +1,17 @@
 
+
 try: 
    from machine import Pin, UART
    import ntptime
    import ubinascii
    import network
    import machine
+   from Connection import Connection 
    from ubinascii import hexlify
    import utime
-   import urequests
-   
-   from Connection import Connection 
    from Utilities import Utilities
    from LED import LED
+   import urequests
    
 except Exception as ex:
    print ( 'Could not import because: ' + str(ex)) 
@@ -39,42 +39,37 @@ password = 'ABCD1234'
 serverAddress = '192.168.4.1' # pi's built in wifi 
 
 connection = Connection (ssid, password )
-
+temperature = 98.6
 if network.WLAN().isconnected(): 
    led.blue()
-   fahrenheit = '98.6'
    print ( 'mac: ' + connection.mac )
    print ( 'serverAddress: ' + serverAddress )
-   url = 'http://' + serverAddress + \
-         '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
-         '&value=' + str(fahrenheit) + \
-         ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
-   r = urequests.get(url)
 else:
-   print ( 'I am not WLAN connected') 
+   print ( 'Warning....I am not WLAN connected') 
    
 
-timeout = 0
-count = 0
-greenTimeout = 0
-wasConnected = False 
-timeout = 0
-greenTimeout = 0 
-print ( 'Running infinite loop' )
+sensorTimeout = utime.ticks_ms() + 3000 
+print ( 'Running infinite sensor loop' )
 while True:
   if network.WLAN().isconnected(): 
-     if led.state == 1:
-        led.state = 2
-        greenTimeout = utime.ticks_ms() + 3000 
-     else:
-        if utime.ticks_ms() > greenTimeout: 
-           led.state = 1 
-  else:  
+     if utime.ticks_ms () > sensorTimeout: 
+        led.green()
+        sensorTimeout = utime.ticks_ms() + 3000 
+        if temperature < 100 : 
+           temperature = temperature + 0.1
+        else:
+           temperature = 98.6
+           
+        url = 'http://' + serverAddress + \
+              '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
+              '&value=' + str(temperature) + \
+              ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
+        r = urequests.get(url)
+        print ( 'sensor updated ' + str(temperature)) 
+  else: 
+     led.red() 
      Utilities.print ( 'Wifi Connection was lost, reconnect')
-     connection.reset()
-     
+     connection.reset()     
   led.update()
+  
 Utilities.print ( 'Done' )
-
-   
-
