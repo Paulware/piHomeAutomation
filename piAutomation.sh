@@ -32,7 +32,19 @@ function line_exists_in () {
 #------------------------------------------------------------------------------
 function accessPoint ()
 {
-  if (whiptail --title "set wireless access point note this can only be run from terminal..." --yesno "" 8 65 --yes-button "Yes" --no-button "Cancel" ) then 
+   if [ "$1" == "1" ]
+   then
+     ok="1"   
+   else
+     if (whiptail --title "set wireless access point note this can only be run from terminal..." --yesno "" 8 65 --yes-button "Yes" --no-button "Cancel" ) then 
+        ok="1"
+     else
+        ok="0"
+     fi
+   fi 
+   
+   if [ "$ok" == "1" ]
+   then
      # read -p "Enter SSID name for the access point" SSID
      SSID=pi4
      apt-get install dnsmasq hostapd -y
@@ -114,12 +126,6 @@ function copy_directories ()
 {
   if (whiptail --title "Make and copy directories, make Tables" --yesno "" 8 65 --yes-button "Yes" --no-button "Cancel" ) then
     echo "#Copy directories"
-    # cd /boot
-    # cp -R Paulware /var/www/html
-    #cd /var/www/html
-    #chmod +x *.*
-    #echo "Directories copied...."   
-    
     
     # Create database and user: root
     mysql -uroot -ppi -e "CREATE DATABASE Paulware /*\!40100 DEFAULT CHARACTER SET utf8 */;"
@@ -155,53 +161,6 @@ function do_ssh ()
     echo "This works as long as you have root access..."
     do_anykey
   fi
-}
-
-function extraYo() 
-{
-   -- sudo mysql -uroot -p
-   -- create database Paulware;
-   -- GRANT ALL PRIVILEGES ON Paulware.* TO 'root'@'localhost' IDENTIFIED BY '';
-   -- FLUSH PRIVILEGES;
-   -- Cntl-D
-   -- reboot
-   
-   -- create user admin@localhost identified by '';
-   -- grant all privileges on *.* to admin@localhost;
-   -- FLUSH PRIVILEGES
-   -- exit;
-   
-   -- sudo apt install phpmyadmin -y
-   
-   -- PHPMYAdmin installation program will ask you a few questions: 
-   -- Select Apache2 when prompted and press the Enter key
-   -- Configuring phpmyadmin? OK
-   -- Configure database for phpmyadmin with dbconfig-common? Yes
-   -- Type your password raspberry and press OK
-   
-   -- sudo phpenmod mysqli
-   -- sudo service apache2 restart
-   
-   -- ln -s /usr/share/phpadmin /var/www/html/phpmyadmin
-   
-   -- mysql
-   -- ALTER USER 'root'@'localhost' IDENTIFIED BY 'raspberry'
-   
-   -- http://192.168.4.1/phpmyadmin/index.php
-   -- root
-   -- raspberry
-   
-   -- Necessary?
-   -- change privileges
-   -- ls -h /var/www/
-   -- sudo chown -R pi:www-data /var/www/html/
-   -- sudo chmod -R 770 /var/www/html/
-   -- ls -lh /var/www/
-   
-   -- Necessary? 
-   -- /etc/php/7.4/apache2
-   -- extension=msqli.so
-   -- extension=msql.so
 }
 
 #------------------------------------------------------------------------------
@@ -252,10 +211,40 @@ function do_reboot()
     reboot 
 }
 
+function setupA () {
+  if (whiptail --title "apt-get update, ssh, create access point, reboot" --yesno "" 8 65 --yes-button "Enable" --no-button "Cancel" ) then
+    # apt-get update
+    echo "apt-get update"
+    sudo apt-get update
+    
+    # ssh
+    sudo touch /boot/ssh
+    # permit root ssh login
+    update_file /etc/ssh/sshd_config "#PermitRootLogin prohibit-password" "PermitRootLogin yes"
+    sudo echo "root:raspberry" | sudo chpasswd
+
+    accessPoint 1
+    do_reboot 
+  fi
+} 
+
+function setupB () {
+   if (whiptail --title "install LAMP, copy custom software, setup crontab, makeTables, reboot" --yesno "" 8 65 --yes-button "Enable" --no-button "Cancel" ) then  
+      do_lamp 
+      copy_directories
+      copy_directories 
+      do_crontab 
+      makeTables 
+      do_reboot     
+    fi 
+} 
+
 #------------------------------------------------------------------------------
 function do_main_menu ()
 {
-  SELECTION=$(whiptail --title "Run 0,1,2 on new sd card, then connect wifi for other tasks" --menu "Arrow/Enter Selects or Tab Key" 0 0 0 --cancel-button Quit --ok-button Select \
+  SELECTION=$(whiptail --title "Run A, on new sd card, then connect to pi4 wifi, and Run B" --menu "Arrow/Enter Selects or Tab Key" 0 0 0 --cancel-button Quit --ok-button Select \
+  "A 1" "SSH and WIFI AccessPoint, reboot" \
+  "B 2" "LAMP, custom software, crontab, reboot" \
   "0 Update" "apt-get update" \
   "1 SSH" "Enable SSH" \
   "2 WIFI AP" "Wireless AccessPoint install" \
@@ -272,9 +261,11 @@ function do_main_menu ()
     exit 0
   elif [ $RET -eq 0 ]; then
     case "$SELECTION" in
+      A\ *) setupA ;; 
+      B\ *) setupB 1 ;; 
       0\ *) do_update ;;    
       1\ *) do_ssh ;; 
-      2\ *) accessPoint ;; 
+      2\ *) accessPoint 0 ;; 
       l\ *) do_lamp ;; 
       c\ *) copy_directories ;;
       d\ *) do_crontab ;; 
