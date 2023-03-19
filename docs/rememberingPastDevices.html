@@ -1,0 +1,27 @@
+<html>
+<head>
+   <title>Remembering Past Devices</title>
+</head>
+<body>
+   <H1>Device List</h1>
+   When you create a new sd card, all the devices that had been previously added to your system will be forgotten<br>
+   So before you wipe out your old sd card, run a php program named: <br>
+      actionsSnapshot.php<br>
+   To capture the prevous devices (on the old system): <br>
+   <ul>
+      <li>Power up your old pi with the old devices</li>
+      <li>Connect to its wifi accesspoint if it has it</li>
+      <li>From the browser execute the url/command: <br>
+             http://192.168.4.1/Paulware/actionsSnapshot.php</li>
+      <li>This will create the .php file: restoreSnapshot.php</li>
+      <li>Using winscp, copy this file to your new sd card, boot directory</li>
+      <li>Power up the new sd card, in a raspberry pi</li>
+      <li>Using winscp copy the restoreSnapshot.php from the boot directory to the /var/www/html/Paulware directory</li>
+      <li>Using a browser, run restoreShapshot.php by opening the url: <br>
+             http://192.168.4.1/Paulware/restoreSnapshot.php<br>
+             Your devices should now reappear
+      </li>
+   </ul>
+   Note: if your old pi does not have a wifi access point available you will need to change 192.168.4.1 to whatever ip address the pi is located on your lan.
+</body>
+</html>
