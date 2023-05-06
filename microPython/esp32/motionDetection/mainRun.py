@@ -45,7 +45,6 @@ pir = Pin(interrupt_pin, Pin.IN)
 pir.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
 
 connection = Connection (ssid, password )
-temperature = 98.6
 if network.WLAN().isconnected(): 
    led.blue()
    print ( 'mac: ' + connection.mac )
