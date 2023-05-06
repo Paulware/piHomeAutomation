@@ -53,7 +53,6 @@ else:
    print ( 'Warning....I am not WLAN connected') 
    
 
-sensorTimeout = utime.ticks_ms() + 3000 
 print ( 'Running infinite sensor loop' )
 while True:
   if network.WLAN().isconnected():  
