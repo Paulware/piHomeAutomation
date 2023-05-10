@@ -77,7 +77,7 @@ while True:
            print ( 'Could not request url because:' + str(ex)) 
           
         print ( 'sensor updated ' + str(temperature)) 
-     else:
+     elif led.state != 2:
          led.green()
          
            
@@ -88,4 +88,5 @@ while True:
   led.update()
   
 Utilities.print ( 'Done' )
+
 
