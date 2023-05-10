@@ -49,6 +49,15 @@ if network.WLAN().isconnected():
    led.blue()
    print ( 'mac: ' + connection.mac )
    print ( 'serverAddress: ' + serverAddress )
+   
+   url = 'http://' + serverAddress + \
+         '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
+         '&value=0 HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
+   try: 
+      r = urequests.get(url)
+   except Exception as ex: 
+      print ( 'Could not request url because:' + str(ex)) 
+   
 else:
    print ( 'Warning....I am not WLAN connected') 
    
@@ -65,8 +74,7 @@ while True:
         led.update()
         url = 'http://' + serverAddress + \
               '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
-              '&value=1' \
-              ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
+              '&value=1 HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
         msgSent = True               
         sleep(2)
         print('Motion stopped!')
@@ -76,7 +84,6 @@ while True:
         except Exception as ex: 
            print ( 'Could not request url because:' + str(ex)) 
           
-        print ( 'sensor updated ' + str(temperature)) 
      elif led.state != 2:
          led.green()
          
