@@ -1,5 +1,11 @@
+# Items user can change 
+interrupt_pin = 14
+testing = False
+ssid     = 'pi4'   
+password = 'ABCD1234' 
 
-
+#  imports 
+print ( 'imports' )
 try: 
    from machine import Pin, UART
    from time import sleep
@@ -12,88 +18,101 @@ try:
    
 except Exception as ex:
    print ( 'Could not import because: ' + str(ex)) 
+
+print ( 'EdgeTrigger' ) 
+#   Class for edgeTrigger
+#   Note: This can be moved to a separate file    
+import utime   
+class EdgeTrigger: 
+   def __init__ (self, msTimeout): 
+      self.msTimeout = msTimeout   
+      self.timer     = 0 
+      self.lastValue = False 
+      self.value     = False 
+      self.rising    = False 
+      self.falling   = False 
+
+   def update(self,value):
+      self.rising  = False 
+      self.falling = False 
+      
+      if value: 
+         if not self.lastValue:      
+            self.rising = True 
+         self.timer = utime.ticks_ms() + self.msTimeout       
+      else: 
+         if self.timer != 0: 
+            if utime.ticks_ms() > self.timer: 
+               self.falling = True 
+               self.timer = 0               
+      self.lastValue = value 
    
-print ( 'Motion sensor code V1.00')              
-  
+   
+# pre-defined functions
+def sendMessage (value): 
+   Utilities.print ( 'mac: ' + connection.mac )
+   Utilities.print ( 'serverAddress: ' + serverAddress )
+      
+   url = 'http://' + serverAddress + \
+         '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
+         '&value=' + str(value) + ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
+   try: 
+      r = urequests.get(url)
+   except Exception as ex: 
+      Utilities.print ( 'Could not request url because:' + str(ex))       
+      
+def handle_interrupt(pin):
+   global motion
+   motion = True
+   global interrupt_pin
+   interrupt_pin = pin 
+     
+Utilities.print ( 'Motion sensor code V1.01')              
 motion = False
 
-def handle_interrupt(pin):
-  global motion
-  motion = True
-  global interrupt_pin
-  interrupt_pin = pin 
-  
 # Standalone objects
 led = LED()
 led.purple()
 utilities = Utilities()
 
-testing = False 
-msgSent = False
-#Change these to match your system   
-if testing: 
-   ssid = 'RICHARDS_WiFi-2.4G' # alternate Wifi
-   password = 'mypassword'     # alternate password 
-else:
-   ssid     = 'pi4'   
-   password = 'ABCD1234' 
 # Note: If device is not logging into the pi's wifi, the server address will be different
 serverAddress = '192.168.4.1' # pi's built in wifi 
 
-interrupt_pin = 14
 pir = Pin(interrupt_pin, Pin.IN)
 pir.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
 
 connection = Connection (ssid, password )
 if network.WLAN().isconnected(): 
    led.blue()
-   print ( 'mac: ' + connection.mac )
-   print ( 'serverAddress: ' + serverAddress )
-   
-   url = 'http://' + serverAddress + \
-         '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
-         '&value=0 HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
-   try: 
-      r = urequests.get(url)
-   except Exception as ex: 
-      print ( 'Could not request url because:' + str(ex)) 
-   
+   sendMessage (0)
 else:
-   print ( 'Warning....I am not WLAN connected') 
-   
-
-print ( 'Running infinite sensor loop' )
+   Utilities.print ( 'Warning....I am not WLAN connected') 
+             
+edgeTrigger = EdgeTrigger (10000)
+Utilities.print ( 'Running infinite sensor loop' )
+if testing:
+   motion = True   
 while True:
-  if network.WLAN().isconnected():  
-     if testing and not msgSent: 
-        motion = True
-        
-     if motion: 
-        print('Motion detected! Interrupt caused by:', interrupt_pin)
-        led.red()
-        led.update()
-        url = 'http://' + serverAddress + \
-              '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
-              '&value=1 HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
-        msgSent = True               
-        sleep(2)
-        print('Motion stopped!')
-        motion = False
-        try: 
-           r = urequests.get(url)
-        except Exception as ex: 
-           print ( 'Could not request url because:' + str(ex)) 
-          
-     elif led.state != 2:
+   if network.WLAN().isconnected():
+      edgeTrigger.update (motion)
+      if edgeTrigger.rising:
+         Utilities.print('Motion detected, edgeTrigger rising')
+         led.red()
+         sendMessage (1)
+         if testing: 
+            motion = False 
+      elif edgeTrigger.falling: 
+         Utilities.print('Motion not detected for 10 seconds')
          led.green()
-         
-           
-  else: 
-     led.red() 
-     Utilities.print ( 'Wifi Connection was lost, reconnect')
-     connection.reset()     
-  led.update()
-  
+         sendMessage(0)
+         motion = False 
+   else: 
+      led.red() 
+      Utilities.print ( 'Wifi Connection was lost, reconnect')
+      connection.reset()     
+   led.update()
+   
 Utilities.print ( 'Done' )
+
 
 
