@@ -1,6 +1,8 @@
+
 # Items user can change 
 interrupt_pin = 14
-testing = False
+testing  = False
+#Change these to match your system   
 ssid     = 'pi4'   
 password = 'ABCD1234' 
 
@@ -49,15 +51,17 @@ class EdgeTrigger:
    
    
 # pre-defined functions
-def sendMessage (value): 
+def sendMessage (value, testing):
    Utilities.print ( 'mac: ' + connection.mac )
    Utilities.print ( 'serverAddress: ' + serverAddress )
+   Utilities.print ( 'value: ' + str(value) )
       
    url = 'http://' + serverAddress + \
          '/Paulware/updateSensor.php?MAC=' + str(connection.mac) + \
          '&value=' + str(value) + ' HTTP/1.1\r\nHost: Paulware\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n'   
    try: 
-      r = urequests.get(url)
+      if not testing: 
+         r = urequests.get(url)
    except Exception as ex: 
       Utilities.print ( 'Could not request url because:' + str(ex))       
       
@@ -84,12 +88,13 @@ pir.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
 connection = Connection (ssid, password )
 if network.WLAN().isconnected(): 
    led.blue()
-   sendMessage (0)
+   sendMessage (0, testing)
 else:
    Utilities.print ( 'Warning....I am not WLAN connected') 
              
 edgeTrigger = EdgeTrigger (10000)
 Utilities.print ( 'Running infinite sensor loop' )
+
 if testing:
    motion = True   
 while True:
@@ -98,13 +103,14 @@ while True:
       if edgeTrigger.rising:
          Utilities.print('Motion detected, edgeTrigger rising')
          led.red()
-         sendMessage (1)
          if testing: 
             motion = False 
+
+         sendMessage (1, testing)
       elif edgeTrigger.falling: 
          Utilities.print('Motion not detected for 10 seconds')
          led.green()
-         sendMessage(0)
+         sendMessage(0, testing)
          motion = False 
    else: 
       led.red() 
