@@ -1,11 +1,12 @@
-
 # Items user can change 
-interrupt_pin = 14
-testing  = False
-#Change these to match your system   
+pinInput = 14
+#Change these to match your system (if you don't want to use the pi's wifi)  
 ssid     = 'pi4'   
 password = 'ABCD1234' 
+# Note: If ssid is changed, you need to know the server address and change the next line 
+serverAddress = '192.168.4.1' # pi's built in wifi 
 
+testing  = False
 #  imports 
 print ( 'imports' )
 try: 
@@ -21,35 +22,32 @@ try:
 except Exception as ex:
    print ( 'Could not import because: ' + str(ex)) 
 
-print ( 'EdgeTrigger' ) 
 #   Class for edgeTrigger
-#   Note: This can be moved to a separate file    
+#   TBD:  Move to a separate file    
 import utime   
+from machine import Pin
 class EdgeTrigger: 
-   def __init__ (self, msTimeout): 
-      self.msTimeout = msTimeout   
+   def __init__ (self, pin): 
+      self.pin = Pin (pin, Pin.IN)      
       self.timer     = 0 
-      self.lastValue = False 
-      self.value     = False 
+      self.value     = self.pin.value()
       self.rising    = False 
       self.falling   = False 
 
-   def update(self,value):
+   def update(self):
       self.rising  = False 
-      self.falling = False 
+      self.falling = False       
       
-      if value: 
-         if not self.lastValue:      
-            self.rising = True 
-         self.timer = utime.ticks_ms() + self.msTimeout       
-      else: 
-         if self.timer != 0: 
-            if utime.ticks_ms() > self.timer: 
+      if utime.ticks_ms() > self.timer: 
+         val = self.pin.value()      
+         if val != self.value: 
+            self.timer = utime.ticks_ms() + 400 #Debounce
+            if self.value == 0:      
+               self.rising = True 
+            else:
                self.falling = True 
-               self.timer = 0               
-      self.lastValue = value 
-   
-   
+            self.value = val 
+      
 # pre-defined functions
 def sendMessage (value, testing):
    Utilities.print ( 'mac: ' + connection.mac )
@@ -64,14 +62,8 @@ def sendMessage (value, testing):
          r = urequests.get(url)
    except Exception as ex: 
       Utilities.print ( 'Could not request url because:' + str(ex))       
-      
-def handle_interrupt(pin):
-   global motion
-   motion = True
-   global interrupt_pin
-   interrupt_pin = pin 
-     
-Utilities.print ( 'Motion sensor code V1.01')              
+           
+Utilities.print ( 'Motion sensor code V1.02')              
 motion = False
 
 # Standalone objects
@@ -79,46 +71,37 @@ led = LED()
 led.purple()
 utilities = Utilities()
 
-# Note: If device is not logging into the pi's wifi, the server address will be different
-serverAddress = '192.168.4.1' # pi's built in wifi 
-
-pir = Pin(interrupt_pin, Pin.IN)
-pir.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
-
-connection = Connection (ssid, password )
-if network.WLAN().isconnected(): 
-   led.blue()
-   sendMessage (0, testing)
-else:
-   Utilities.print ( 'Warning....I am not WLAN connected') 
+if not testing:
+   connection = Connection (ssid, password )
+   if network.WLAN().isconnected(): 
+      led.blue()
+      sendMessage (0, testing)
+   else:
+       Utilities.print ( 'Warning....I am not WLAN connected') 
              
-edgeTrigger = EdgeTrigger (10000)
+edgeTrigger = EdgeTrigger (pinInput)
 Utilities.print ( 'Running infinite sensor loop' )
-
-if testing:
-   motion = True   
 while True:
-   if network.WLAN().isconnected():
-      edgeTrigger.update (motion)
-      if edgeTrigger.rising:
-         Utilities.print('Motion detected, edgeTrigger rising')
-         led.red()
-         if testing: 
-            motion = False 
-
-         sendMessage (1, testing)
-      elif edgeTrigger.falling: 
-         Utilities.print('Motion not detected for 10 seconds')
-         led.green()
-         sendMessage(0, testing)
-         motion = False 
-   else: 
-      led.red() 
-      Utilities.print ( 'Wifi Connection was lost, reconnect')
-      connection.reset()     
+   if not testing: 
+      if network.WLAN().isconnected():
+         if edgeTrigger.rising:
+            Utilities.print('Motion detected, edgeTrigger rising')
+            led.red()         
+            sendMessage (1, testing)
+         elif edgeTrigger.falling: 
+            Utilities.print('Motion no longer detected')
+            led.green()
+            sendMessage(0, testing)
+      else: 
+         led.red() 
+         Utilities.print ( 'Wifi Connection was lost, reconnect')
+         connection.reset() 
+            
    led.update()
+   edgeTrigger.update()
    
 Utilities.print ( 'Done' )
+
 
 
 
